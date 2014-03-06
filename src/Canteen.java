@@ -2,6 +2,7 @@
  * Created by Travis on 3/6/14.
  */
 public class Canteen {
+    //test
     private double maxVolume;
     private int percentFull;
 
