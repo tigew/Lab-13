@@ -3,44 +3,48 @@
  */
 public class Canteen {
     //test
-    private double maxVolume;
+    private double maxVolume; //in cups
     private int percentFull;
 
     public Canteen()
     {
-
+        maxVolume = 8;
+        percentFull = 0;
     }
 
-    public Canteen(double a, int b)
+    public Canteen(double cMaxVolue, int cPercentFull)
     {
-
+        maxVolume = cMaxVolue;
+        percentFull = cPercentFull;
     }
 
     public void fill()
     {
-
+        this.percentFull = 100;
     }
 
     public void empty()
     {
-
+        this.percentFull = 0;
     }
 
     public void sip()
     {
-
+        this.percentFull -= 1;
     }
 
-    public void sip(int a)
+    public void sip(int cSip)
     {
-
+        this.percentFull -= cSip;
     }
 
-    public double getMaxVolume() {
-        return this.maxVolume;
+    public double getMaxVolume()
+    {
+        return this.maxVolume / 4;
     }
 
-    public int getPercentFull() {
+    public int getPercentFull()
+    {
         return this.percentFull;
     }
 }
