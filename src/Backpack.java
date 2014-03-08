@@ -53,7 +53,7 @@ public class Backpack {
         {
             weight += equipment[i].getWeight();
         }
-        weight += canteen.getPercentFull() / 4;
+        weight += (canteen.getPercentFull() / 100) * canteen.getMaxVolume() * 2.085;
         System.out.println("Your pack weights this much: " + weight + " lbs");
     }
 }
