@@ -5,8 +5,6 @@ public class Backpack {
     private Canteen canteen;
     private Equipment equipment[];
 
-    CinReader sc = new CinReader();
-
     public Backpack()
     {
         equipment = new Equipment[0];
@@ -45,7 +43,7 @@ public class Backpack {
 
     private void removeCanteen()
     {
-
+        canteen = null;
     }
 
     public void getWeight()
@@ -55,10 +53,7 @@ public class Backpack {
         {
             weight += equipment[i].getWeight();
         }
-        if (canteen.getPercentFull() == 100)
-        {
-            weight += .25;
-        }
+        weight += canteen.getPercentFull() / 4;
         System.out.println("Your pack weights this much: " + weight + " lbs");
     }
 }
